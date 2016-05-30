@@ -1,0 +1,598 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+ul li{
+  list-style: none;
+}
+html, body {
+  height: 100%;
+}
+body {
+  font-family: "microsoft yahei";
+  overflow: hidden;
+  background:#fdd100;
+
+}
+/*loading*/
+#divPageLoading{
+}
+#divPageLoading img{
+  width:1.61rem;
+  margin-top: 4rem;
+  margin-left: 2.5rem;
+}
+.wrap{
+  height:100%;
+  position: relative;
+}
+/*background*/
+#background{
+  width:300%;
+  height:100%;
+  position: absolute;
+  background-size: cover;
+  /*left:-200%;*/
+}
+#background li{
+  width:33.33%;
+  float: left;
+  height:100%;
+  position: relative;
+}
+#background li *{
+  position: absolute;
+}
+.bg_01{
+  background-image: url("../img/bg1.jpg");
+  background-size: cover;
+}
+.bg_02{
+  transform-origin: 70% 50%;
+  -webkit-transform-origin: 70% 50%;
+  background-image: url("../img/bg2.jpg");
+  background-size: cover;
+}
+.bg_02_scale{
+  -webkit-animation:bg_02_scale .7s linear forwards;
+  animation:bg_02_scale .7s linear forwards;
+}
+.bg_02_scale_old{
+  -webkit-animation:bg_02_scale_old .7s linear forwards;
+  animation:bg_02_scale_old .7s linear forwards;
+}
+.bg_03{
+  background-image: url("../img/bg3.jpg");
+  background-size: cover;
+}
+.change_bg{
+  animation:change_bg 2s linear forwards;
+  -webkit-animation:change_bg 2s linear forwards;
+}
+.change_bg_2{
+  animation:change_bg_2 6s linear forwards;
+  -webkit-animation:change_bg_2 6s linear forwards;
+}
+/*第一屏*/
+.sun{
+  position: absolute;
+  width:1.1rem;
+  height:1.09rem;
+  background-image: url("../img/sun.png");
+  background-size: cover;
+  top: .4rem;
+  left: .6rem;
+}
+.cload1{
+  position: absolute;
+  width:1.1rem;
+  height:.36rem;
+  background-image: url("../img/cload1.png");
+  background-size: cover;
+  top:2rem;
+  opacity: .7;
+  animation: cload1 14s linear infinite;
+  -webkit-animation: cload1 14s linear infinite;
+}
+.cload2{
+  position: absolute;
+  opacity: .7;
+  width:1.72rem;
+  height:.56rem;
+  background-image: url("../img/cload2.png");
+  background-size: cover;
+  top:2.2rem;
+  animation: cload2 14s linear infinite;
+  -webkit-animation: cload2 14s linear infinite;
+}
+.monkey{
+  width:3.2rem;
+  height:3.36rem;
+  position:absolute;
+  background-image: url("../img/monkey_all.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  top:5rem;
+  left:-2.5rem;
+  /*left:2rem;*/
+  /*background-position: -19rem 0 ;*/
+}
+.walk{
+  animation: monkey-come .5s steps(1,start) infinite;
+  -webkit-animation: monkey-come .5s steps(1,start) infinite;
+}
+.mon-run{
+  animation: monkey-bao .7s steps(1,start) infinite;
+  -webkit-animation: monkey-bao .7s steps(1,start) infinite;
+}
+
+/*猴子偷吃*/
+.monkey_eat{
+  animation: eat 1s steps(1,start) 6 forwards;
+  -webkit-animation: eat 1s steps(1,start) 6 forwards;
+}
+/*求救*/
+.monkey_help{
+  animation: hellp .7s steps(1,start) 3 forwards;
+  -webkit-animation: hellp .7s steps(1,start) 3 forwards;
+}
+/*变红包*/
+.monkey_red{
+  animation: redP .8s steps(1,start) 3 forwards;
+  -webkit-animation: redP .8s steps(1,start) 3 forwards;
+}
+/*亢奋*/
+.monkey_kanfen{
+  background-position: -44.1rem 0;
+  animation: kanfen 1s linear infinite;
+  -webkit-animation: kanfen 1s linear infinite;
+}
+/*//待变化*/
+.qiujiu{
+  background-position: -29.03rem 0;
+}
+/*痛苦*/
+.position{
+  background-position: -19rem 0 ;
+}
+/*开心*/
+.happying{
+  background-position: -6.2rem 0;
+}
+/*兴奋*/
+.kanfen{
+  background-position: -44.1rem 0;
+}
+.pauseWalk {
+  -webkit-animation-play-state: paused;
+  -moz-animation-play-state: paused;
+}
+/*第二屏*/
+/*眼泪*/
+.yanlei{
+  position: absolute;
+  width:.46rem;
+  height:.44rem;
+  background: url("../img/ear.png");
+  background-size: cover;
+  top: 5.95rem;
+  left: 3.1rem;
+  z-index: 100;
+  opacity: 0;
+}
+.yanlei_dong{
+  animation: biaolei .4s linear 6 forwards;
+  -webkit-animation: biaolei .4s linear 6 forwards;
+}
+/*视线*/
+.ear{
+  width: 4.3rem;
+  height: .78rem;
+  background: url("../img/find.png");
+  background-size: cover;
+  top: 5.3rem;
+  left: .35rem;
+  opacity: 0;
+}
+.ear_shansuo{
+  animation: shansuo .5s linear 3 forwards;
+  -webkit-animation: shansuo .5s linear 3 forwards;
+}
+.fengmi{
+  background:url("../img/think.png");
+  background-size: cover;
+  width:1.63rem;
+  height:1.46rem;
+  top: 4rem;
+  left: 1.3rem;
+  display: none;
+}
+.fengwo{
+  width:.8rem;
+  height:.7rem;
+  background-image: url("../img/fengwo.png");
+  background-size: cover;
+  top:5.5rem;
+  left:4.5rem;
+}
+.fengwo-dong{
+  animation: dong 1.5s linear;
+  -webkit-animation: dong 1.5s linear;
+}
+
+/*蜜蜂*/
+.mifeng{
+  position: absolute;
+  width:.75rem;
+  height:.78rem;
+  background-image: url("../img/bee02.gif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  top: 5.5rem;
+  left: 4.5rem;
+  /*transform: rotate(15deg);*/
+  /*-webkit-transform: rotate(15deg);*/
+  opacity: 0;
+  z-index: 20000;
+}
+.mifeng_zha{
+  animation: zha .2s linear 3 forwards;
+  -webkit-animation: zha .2s linear 3 forwards;
+}
+.mifeng_out{
+  animation: out .5s linear forwards;
+  -webkit-animation: out .5s linear forwards;
+}
+.mifeng_scale{
+  transition: 1s;
+  -webkit-transition: 1s;
+  transform: scale(1.5);
+  -webkit-transform: scale(1.5);
+}
+
+/*第三屏*/
+/*羊*/
+.sheep{
+  width:2.21rem;
+  height:3.19rem;
+  background-image: url("../img/sheep_all.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  top: 5rem;
+  left: 3.5rem;
+  z-index: 100;
+
+}
+.sheep_moren{
+  animation: sheep-moren .7s steps(1,start) infinite;
+  -webkit-animation: sheep-moren .7s steps(1,start) infinite;
+}
+.sheep_smail{
+  background-position: -6.85rem 0;
+}
+.sheep-dong{
+  animation: sheep .7s steps(1,start) 3 forwards;
+  -webkit-animation: sheep .7s steps(1,start) 3 forwards;
+}
+.guang{
+  width: .74rem;
+  height: .74rem;
+  background: url("../img/guang.png");
+  background-size: cover;
+  top: 6.8rem;
+  left: 4.2rem;
+  z-index: 1000;
+  display: none;
+}
+.guang-dong{
+  display: block;
+  animation: guang 1s linear forwards;
+  -webkit-animation: guang 1s linear forwards;
+}
+.red{
+  width:.7rem;
+  height:.7rem;
+  background: url("../img/red-old.png");
+  background-size: cover;
+  top: 5.5rem;
+  left: 2.2rem;
+  z-index: 1000000;
+  display: none;
+}
+.red_big{
+  animation: scale_big 2s linear forwards;
+  -webkit-animation: scale_big 2s linear forwards;
+}
+
+/**************************************帧动画**********************************************/
+/*猴子出场动画*/
+@keyframes monkey-come {
+  0% { background-position: 0 0; }
+  50% { background-position: -3.15rem 0; }
+  100% { background-position: 0 0 }
+}
+@-webkit-keyframes monkey-come {
+  0% { background-position: 0 0; }
+  50% { background-position: -3.15rem 0; }
+  100% { background-position: 0 0 }
+}
+
+
+/*带包*/
+@-webkit-keyframes monkey-bao {
+  0% { background-position: -22.3rem 0; }
+  50% { background-position: -25.5rem 0 }
+  to { background-position: -22.3rem 0 }
+}
+@keyframes monkey-bao {
+  0% { background-position: -22.3rem 0; }
+  50% { background-position: -25.5rem 0 }
+  to { background-position: -22.3rem 0 }
+}
+
+/*求救*/
+@-webkit-keyframes hellp {
+  0% {  background-position: -32.5rem 0; }
+  70% { background-position: -28.7rem 0; }
+  to {  background-position: -32.5rem 0; }
+}
+@keyframes hellp {
+  0% {  background-position: -32.5rem 0; }
+  70% { background-position: -28.7rem 0; }
+  to {  background-position: -32.5rem 0; }
+}
+/*偷吃*/
+@keyframes eat{
+  0% { background-position: -15.8rem 0; }
+  50% {background-position: -12.7rem 0 }
+  100% { background-position: -15.8rem 0;  }
+}
+@-webkit-keyframes eat{
+  0% { background-position: -15.8rem 0; }
+  50% {background-position: -12.7rem 0 }
+  100% { background-position: -15.8rem 0;  }
+}
+
+
+/*变红包*/
+@keyframes redP{
+  0% { background-position: -36.3rem 0; }
+  50% { background-position: -28.7rem 0; }
+  100% { background-position: -36.3rem 0; }
+}
+/*32.5*/
+@-webkit-keyframes redP{
+  0% { background-position: -36.3rem 0; }
+  50% { background-position: -28.7rem 0; }
+  100% { background-position: -36.3rem 0; }
+}
+/*亢奋*/
+@keyframes kanfen{
+  0% { top:5.5rem;}
+  50% { top:5rem;}
+  to { top:5.5rem;}
+}
+@-webkit-keyframes kanfen{
+  0% { top:5.5rem;}
+  50% { top:5rem;}
+  to { top:5.5rem;}
+}
+
+/*视线闪烁*/
+@-webkit-keyframes shansuo{
+  0% { opacity:0;}
+  50% { opacity: 1;}
+  to { opacity: 0;}
+}
+@keyframes shansuo{
+  0% { opacity:0;}
+  50% { opacity: 1;}
+  to { opacity: 0;}
+}
+/*飘云*/
+@-webkit-keyframes cload1 {
+  0% { left:.5rem; }
+  50% { left:5rem; }
+  to { left:.5rem; }
+}
+@keyframes cload1 {
+  0% { left:.5rem; }
+  50% { left:5rem; }
+  to { left:.5rem; }
+}
+@-webkit-keyframes cload2 {
+  0% { left:5rem; }
+  50% { left:.5rem; }
+  to { left:5rem; }
+}
+@keyframes cload2 {
+  0% { left:5rem; }
+  50% { left:.5rem;}
+  to { left:5rem; }
+}
+/*蜜蜂扎*/
+@keyframes zha {
+  0% { top:4.7rem;left:2.6rem; }
+  50% { top:4.8rem;left:2.58rem;}
+  to { top:4.7rem; left:2.6rem;}
+}
+@-webkit-keyframes zha {
+  0% { top:4.7rem;left:2.6rem;}
+  50% { top:4.8rem;left:2.58rem;}
+  to { top:4.7rem; left:2.6rem;}
+}
+@-webkit-keyframes out {
+  0% { top:5rem;left:2.5rem; }
+  to { top:2rem; left:-1rem;}
+}
+@keyframes out {
+  0% { top:5rem;left:2.5rem; }
+  to { top:2rem; left:-1rem;}
+}
+
+/*蜂窝抖动*/
+@keyframes dong {
+  0% {
+    transform: scale(1.5) rotate(8deg);
+    -webkit-transform: scale(1.5) rotate(8deg);
+    opacity: .8;
+  }
+  50% {
+    transform: scale(.6) rotate(-4deg);
+    -webkit-transform: scale(.6) rotate(-4deg);
+  }
+  to {
+    transform: scale(1) rotate(0deg);
+    -webkit-transform: scale(1) rotate(0deg);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes dong {
+  0% {
+    transform: scale(1.5) rotate(8deg);
+    -webkit-transform: scale(1.5) rotate(8deg);
+    opacity: .8;
+  }
+  50% {
+    transform: scale(.6) rotate(-4deg);
+    -webkit-transform: scale(.6) rotate(-4deg);
+  }
+  to {
+    transform: scale(1) rotate(0deg);
+    -webkit-transform: scale(1) rotate(0deg);
+    opacity: 1;
+  }
+}
+/*/飙泪/*/
+@-webkit-keyframes biaolei{
+  0% { opacity:0;}
+  50% { opacity: 1;}
+  to { opacity: 0;}
+}
+@keyframes biaolei{
+  0% { opacity:0;}
+  50% { opacity: 1;}
+  to { opacity: 0;}
+}
+/*kavayi*/
+@keyframes sheep-moren{
+  0% { background-position: 0 0 ; }
+  50% { background-position: -2.3rem 0; }
+  100% { background-position: 0 0; }
+}
+@-webkit-keyframes sheep-moren{
+  0% { background-position: 0 0 ; }
+  50% { background-position: -2.3rem 0; }
+  100% { background-position: 0 0; }
+}
+@keyframes sheep{
+  0% { background-position: 0 0 ; }
+  50% { background-position: -2.3rem 0; }
+  70% { background-position: -11.54rem 0; }
+  100% { background-position: -9.2rem 0; }
+}
+@-webkit-keyframes sheep{
+  0% { background-position: 0 0 ; }
+  50% { background-position: -2.3rem 0; }
+  70% { background-position: -11.54rem 0; }
+  100% { background-position: -9.2rem 0; }
+}
+@-webkit-keyframes guang{
+  0% { top: 6.8rem; left: 4.2rem; }
+  50% { top: 5rem; left: 3.2rem; }
+  100% { top: 5.5rem; left: 2.2rem; }
+}
+@keyframes guang{
+  0% { top: 6.8rem; left: 4.2rem; }
+  50% { top: 5rem; left: 3.2rem; }
+  100% { top: 5.5rem; left: 2.2rem; }
+}
+/*红包放大*/
+@keyframes scale_big{
+  0% {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+  }
+  100% {
+    transform: scale(60);
+    -webkit-transform: scale(60);
+  }
+}
+@-webkit-keyframes scale_big{
+  0% {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+  }
+  100% {
+    transform: scale(60);
+    -webkit-transform: scale(60);
+  }
+}
+/*背景放大*/
+@keyframes bg_02_scale{
+  0% {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+  }
+  100% {
+    transform: scale(1.3);
+    -webkit-transform: scale(1.3);
+  }
+}
+@-webkit-keyframes bg_02_scale{
+  0% {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+  }
+  100% {
+    transform: scale(1.3);
+    -webkit-transform: scale(1.3);
+  }
+}
+/*背景缩小*/
+@keyframes bg_02_scale_old{
+  0% {
+    transform: scale(1.3);
+    -webkit-transform: scale(1.3);
+  }
+  100% {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+  }
+}
+@-webkit-keyframes bg_02_scale_old{
+  0% {
+    transform: scale(1.3);
+    -webkit-transform: scale(1.3);
+  }
+  100% {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+  }
+}
+
+
+/*li3背景切换*/
+/*@-webkit-keyframes change_bg{
+  0% { background-image: url("../img/bg3.jpg"); }
+  to { background-image: url("../img/bg4.jpg"); }
+}
+@keyframes change_bg{
+  0% { background-image: url("../img/bg3.jpg"); }
+  to { background-image: url("../img/bg4.jpg"); }
+}*/
+
+@keyframes change_bg_2{
+  0% { background-image: url("../img/bg4.jpg"); }
+  30% { background-image: url("../img/bg4.jpg"); }
+  80% { background-image: url("../img/bg4.jpg"); }
+  to { background-image: url("../img/bg5.jpg"); }
+}
+@-webkit-keyframes change_bg_2{
+  0% { background-image: url("../img/bg4.jpg"); }
+  30% { background-image: url("../img/bg4.jpg"); }
+  80% { background-image: url("../img/bg4.jpg"); }
+  to { background-image: url("../img/bg5.jpg"); }
+}
+
+
