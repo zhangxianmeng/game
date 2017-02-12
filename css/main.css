@@ -9,10 +9,10 @@ html, body {
   height: 100%;
   max-width:640px;
   margin: 0 auto;
+  overflow: hidden;
 }
 body {
   font-family: "microsoft yahei";
-  overflow: hidden;
   background:#fdd100;
 
 }
@@ -30,11 +30,11 @@ body {
 }
 /*background*/
 #background{
+	
   width:300%;
   height:100%;
   position: absolute;
   background-size: cover;
-  /*left:-200%;*/
 }
 #background li{
   width:33.33%;
@@ -75,7 +75,7 @@ body {
   animation:change_bg_2 6s linear forwards;
   -webkit-animation:change_bg_2 6s linear forwards;
 }
-/*µÚÒ»ÆÁ*/
+/*ï¿½ï¿½Ò»ï¿½ï¿½*/
 .sun{
   position: absolute;
   width:1.1rem;
@@ -128,40 +128,40 @@ body {
   -webkit-animation: monkey-bao .7s steps(1,start) infinite;
 }
 
-/*ºï×ÓÍµ³Ô*/
+/*ï¿½ï¿½ï¿½ï¿½Íµï¿½ï¿½*/
 .monkey_eat{
   animation: eat 1s steps(1,start) 6 forwards;
   -webkit-animation: eat 1s steps(1,start) 6 forwards;
 }
-/*Çó¾È*/
+/*ï¿½ï¿½ï¿½*/
 .monkey_help{
   animation: hellp .7s steps(1,start) 3 forwards;
   -webkit-animation: hellp .7s steps(1,start) 3 forwards;
 }
-/*±äºì°ü*/
+/*ï¿½ï¿½ï¿½ï¿½*/
 .monkey_red{
   animation: redP .8s steps(1,start) 3 forwards;
   -webkit-animation: redP .8s steps(1,start) 3 forwards;
 }
-/*¿º·Ü*/
+/*ï¿½ï¿½ï¿½ï¿½*/
 .monkey_kanfen{
   background-position: -44.1rem 0;
   animation: kanfen 1s linear infinite;
   -webkit-animation: kanfen 1s linear infinite;
 }
-/*//´ý±ä»¯*/
+/*//ï¿½ï¿½ä»¯*/
 .qiujiu{
   background-position: -29.03rem 0;
 }
-/*Í´¿à*/
+/*Í´ï¿½ï¿½*/
 .position{
   background-position: -19rem 0 ;
 }
-/*¿ªÐÄ*/
+/*ï¿½ï¿½ï¿½ï¿½*/
 .happying{
   background-position: -6.2rem 0;
 }
-/*ÐË·Ü*/
+/*ï¿½Ë·ï¿½*/
 .kanfen{
   background-position: -44.1rem 0;
 }
@@ -169,8 +169,8 @@ body {
   -webkit-animation-play-state: paused;
   -moz-animation-play-state: paused;
 }
-/*µÚ¶þÆÁ*/
-/*ÑÛÀá*/
+/*ï¿½Ú¶ï¿½ï¿½ï¿½*/
+/*ï¿½ï¿½ï¿½ï¿½*/
 .yanlei{
   position: absolute;
   width:.46rem;
@@ -186,7 +186,7 @@ body {
   animation: biaolei .4s linear 6 forwards;
   -webkit-animation: biaolei .4s linear 6 forwards;
 }
-/*ÊÓÏß*/
+/*ï¿½ï¿½ï¿½ï¿½*/
 .ear{
   width: 4.3rem;
   height: .78rem;
@@ -222,7 +222,7 @@ body {
   -webkit-animation: dong 1.5s linear;
 }
 
-/*ÃÛ·ä*/
+/*ï¿½Û·ï¿½*/
 .mifeng{
   position: absolute;
   width:.75rem;
@@ -252,8 +252,8 @@ body {
   -webkit-transform: scale(1.5);
 }
 
-/*µÚÈýÆÁ*/
-/*Ñò*/
+/*ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½*/
+/*ï¿½ï¿½*/
 .sheep{
   width:2.21rem;
   height:3.19rem;
@@ -306,8 +306,8 @@ body {
   -webkit-animation: scale_big 2s linear forwards;
 }
 
-/**************************************Ö¡¶¯»­**********************************************/
-/*ºï×Ó³ö³¡¶¯»­*/
+/**************************************Ö¡ï¿½ï¿½ï¿½ï¿½**********************************************/
+/*ï¿½ï¿½ï¿½Ó³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½*/
 @keyframes monkey-come {
   0% { background-position: 0 0; }
   50% { background-position: -3.15rem 0; }
@@ -320,7 +320,7 @@ body {
 }
 
 
-/*´ø°ü*/
+/*ï¿½ï¿½ï¿½*/
 @-webkit-keyframes monkey-bao {
   0% { background-position: -22.3rem 0; }
   50% { background-position: -25.5rem 0 }
@@ -332,7 +332,7 @@ body {
   to { background-position: -22.3rem 0 }
 }
 
-/*Çó¾È*/
+/*ï¿½ï¿½ï¿½*/
 @-webkit-keyframes hellp {
   0% {  background-position: -32.5rem 0; }
   70% { background-position: -28.7rem 0; }
@@ -343,7 +343,7 @@ body {
   70% { background-position: -28.7rem 0; }
   to {  background-position: -32.5rem 0; }
 }
-/*Íµ³Ô*/
+/*Íµï¿½ï¿½*/
 @keyframes eat{
   0% { background-position: -15.8rem 0; }
   50% {background-position: -12.7rem 0 }
@@ -356,7 +356,7 @@ body {
 }
 
 
-/*±äºì°ü*/
+/*ï¿½ï¿½ï¿½ï¿½*/
 @keyframes redP{
   0% { background-position: -36.3rem 0; }
   50% { background-position: -28.7rem 0; }
@@ -368,7 +368,7 @@ body {
   50% { background-position: -28.7rem 0; }
   100% { background-position: -36.3rem 0; }
 }
-/*¿º·Ü*/
+/*ï¿½ï¿½ï¿½ï¿½*/
 @keyframes kanfen{
   0% { top:5.5rem;}
   50% { top:5rem;}
@@ -380,7 +380,7 @@ body {
   to { top:5.5rem;}
 }
 
-/*ÊÓÏßÉÁË¸*/
+/*ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ë¸*/
 @-webkit-keyframes shansuo{
   0% { opacity:0;}
   50% { opacity: 1;}
@@ -391,7 +391,7 @@ body {
   50% { opacity: 1;}
   to { opacity: 0;}
 }
-/*Æ®ÔÆ*/
+/*Æ®ï¿½ï¿½*/
 @-webkit-keyframes cload1 {
   0% { left:.5rem; }
   50% { left:5rem; }
@@ -412,7 +412,7 @@ body {
   50% { left:.5rem;}
   to { left:5rem; }
 }
-/*ÃÛ·äÔú*/
+/*ï¿½Û·ï¿½ï¿½ï¿½*/
 @keyframes zha {
   0% { top:4.7rem;left:2.6rem; }
   50% { top:4.8rem;left:2.58rem;}
@@ -432,7 +432,7 @@ body {
   to { top:2rem; left:-1rem;}
 }
 
-/*·äÎÑ¶¶¶¯*/
+/*ï¿½ï¿½ï¿½Ñ¶ï¿½ï¿½ï¿½*/
 @keyframes dong {
   0% {
     transform: scale(1.5) rotate(8deg);
@@ -465,7 +465,7 @@ body {
     opacity: 1;
   }
 }
-/*/ì­Àá/*/
+/*/ï¿½ï¿½ï¿½/*/
 @-webkit-keyframes biaolei{
   0% { opacity:0;}
   50% { opacity: 1;}
@@ -509,7 +509,7 @@ body {
   50% { top: 5rem; left: 3.2rem; }
   100% { top: 5.5rem; left: 2.2rem; }
 }
-/*ºì°ü·Å´ó*/
+/*ï¿½ï¿½ï¿½Å´ï¿½*/
 @keyframes scale_big{
   0% {
     transform: scale(1);
@@ -530,7 +530,7 @@ body {
     -webkit-transform: scale(60);
   }
 }
-/*±³¾°·Å´ó*/
+/*ï¿½ï¿½ï¿½ï¿½ï¿½Å´ï¿½*/
 @keyframes bg_02_scale{
   0% {
     transform: scale(1);
@@ -551,7 +551,7 @@ body {
     -webkit-transform: scale(1.3);
   }
 }
-/*±³¾°ËõÐ¡*/
+/*ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¡*/
 @keyframes bg_02_scale_old{
   0% {
     transform: scale(1.3);
@@ -574,7 +574,7 @@ body {
 }
 
 
-/*li3±³¾°ÇÐ»»*/
+/*li3ï¿½ï¿½ï¿½ï¿½ï¿½Ð»ï¿½*/
 /*@-webkit-keyframes change_bg{
   0% { background-image: url("../img/bg3.jpg"); }
   to { background-image: url("../img/bg4.jpg"); }

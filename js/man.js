@@ -162,14 +162,6 @@ $(function(){
           });
           $('.bg_03').addClass('change_bg_2');
         },300);
-        //setTimeout(function(){
-        //  alert(1);
-        //  $('script[src="js/snowfall.jquery.js"]').remove();
-        //  $('img[src="img/red.png"]').fadeOut(4000,function(){
-        //    $('img[src="img/red.png"]').remove();
-        //  });
-        //
-        //},14000);
         dtd.resolve();
       });
     return dtd.promise();
